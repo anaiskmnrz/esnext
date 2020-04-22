@@ -167,8 +167,12 @@ class PriceService {
 instanceTripService = new TripService ();
 instancePriceService = new PriceService();
 
-instanceTripService.findByName("Rio de Janeiro").then(trip => console.log("Trip found : " + trip));
-instanceTripService.findByName("Toulouse").then(trip => console.log("Trip found : " + trip)).catch(err => console.log(err));
+instanceTripService.findByName("Paris")
+					.then(trip => console.log("Trip found : ", trip));
+
+instanceTripService.findByName("Toulouse")
+					.then(trip => console.log("Trip found : ", trip))
+					.catch(err => console.log(err));
 
 instanceTripService.findByName("Rio de Janeiro")
 	.then( trip => trip.id)
